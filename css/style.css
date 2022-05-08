@@ -23,3 +23,25 @@ html, body {
 .sign-up-text { 
     color: #fff;
 }
+
+.sign-up-text:hover {
+    color: rgb(191, 191, 191);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ img {
+     width: 100%;
+ }
+
+ .header {
+     height: 530px;
+     background: url("../img/header.jpg") no-repeat center center / cover;
+ }
+
+ .header .logo {
+     width: 270px;
+     margin: 20px;
+ }
