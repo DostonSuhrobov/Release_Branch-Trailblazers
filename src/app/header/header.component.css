@@ -56,7 +56,21 @@
      margin-bottom: 15px;
  }
 
-
+.header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180px;
+    z-index: 1;
+    background: linear-gradient(
+        156.82deg,
+        rgba(0, 0, 0, 0.6) 4.58%,
+        rgba(0, 0, 0, 0) 69.61%
+      ),
+      linear-gradient(24.5deg, rgba(0, 0, 0, 0.2) 4.71%, rgba(0, 0, 0, 0) 71.49%); 
+}
 
 .btn {
     display: inline-block;
@@ -77,6 +91,8 @@
 .btn-cta:hover {
     opacity: 0.8;
 }
+
+
 
 /* Media Queries */
 

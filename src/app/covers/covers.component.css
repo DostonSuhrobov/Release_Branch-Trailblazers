@@ -67,3 +67,15 @@
 .categories .cover-4 { 
     background: url("/assets/img/cover-4.jpg") no-repeat center center / cover;
 }
+
+@media (max-width: 768px) {
+
+    .text-xl {
+        line-height: 1;
+    }
+
+    .categories .covers {
+        grid-template-columns: 1fr;
+    }
+
+}
