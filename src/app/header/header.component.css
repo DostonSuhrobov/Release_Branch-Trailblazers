@@ -24,6 +24,8 @@
      display: flex;
      justify-content: flex-end;
      padding: 20px 40px;
+     z-index: 2;
+     position: relative;
  }
 
  .header nav .login-btn{
@@ -34,6 +36,7 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-decoration: none;
  }
 
  .header .header-content {
