@@ -1,5 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Rubik:wght@300;400;600;700&display=swap');
+
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -14,3 +17,17 @@ body {
     line-height: 1.7;
     overflow-x: hidden;
 }
+
+ul {
+    list-style-type: none;
+}
+
+ img {
+     width: 100%;
+ }
+
+ h4 {
+     color: #00ed82;
+     font-size: 12px;
+     text-transform: uppercase;
+ }

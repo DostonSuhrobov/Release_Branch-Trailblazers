@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Rubik:wght@300;400;600;700&display=swap');
-
-
 
 .included-text {
     margin-top: 10px;
@@ -17,20 +14,6 @@
 .sign-up-text:hover {
     color: rgb(191, 191, 191);
 }
-
-ul {
-    list-style-type: none;
-}
-
- img {
-     width: 100%;
- }
-
- h4 {
-     color: #00ed82;
-     font-size: 12px;
-     text-transform: uppercase;
- }
 
  .header {
      height: 530px;
