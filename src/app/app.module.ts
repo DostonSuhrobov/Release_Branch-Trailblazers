@@ -9,6 +9,8 @@ import { CoversComponent } from './covers/covers.component';
 import { LiveSportsComponent } from './live-sports/live-sports.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import { NavBarComponent } from './register/nav-bar/nav-bar.component';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { LoginComponent } from './login/login.component';
     CoversComponent,
     LiveSportsComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
