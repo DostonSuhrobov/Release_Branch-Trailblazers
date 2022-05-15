@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Rubik:wght@300;400;600;700&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+
 
 
 * {
@@ -13,7 +15,7 @@
 body {
     font-family: 'Rubik', sans-serif;
     background: #000;
-    
+
     line-height: 1.7;
     overflow-x: hidden;
 }
