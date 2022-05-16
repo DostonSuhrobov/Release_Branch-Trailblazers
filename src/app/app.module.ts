@@ -13,6 +13,7 @@ import { RegisterComponent } from './register/register.component';
 import { NavBarComponent } from './register/nav-bar/nav-bar.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -27,13 +28,14 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     RegisterComponent,
     NavBarComponent,
-    MovieCardComponent
-    NavbarComponent
+    MovieCardComponent,
+    NavbarComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

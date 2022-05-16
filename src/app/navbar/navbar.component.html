@@ -5,11 +5,12 @@
     <div class="navbarNav">
       <div class="navList">
         <ul>
-          <li class="nav-item">
+          <li class="nav-item" >
             <a routerLink="/">Moives</a>
           </li>
-          <li class="nav-item">
-            <a data-toggle="modal" data-target="#exampleModal">Search <i class="fas fa-search"></i> </a>
+          <li class="nav-item" >
+            <a data-toggle="modal" data-target="#exampleModal" >Search <i class="fas fa-search"></i> </a>
+
           </li>
         </ul>
       </div>
@@ -36,8 +37,11 @@
         </button>
       </div>
       <div class="modal-body">
-        <input placeholder="Enter your keywords here..." />
-        <button class="btn btn-outline-danger">Search</button>
+        <input placeholder="Enter your keywords here..." #all_movies/>
+        <button class="btn btn-outline-danger" >Search</button>
+        <ul  *ngFor="let movie of movieList | async">
+          <li style="color: white;">{{ movie.moviename }}</li>
+        </ul>
       </div>
     </div>
   </div>
