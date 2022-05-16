@@ -1,17 +1,17 @@
-<app-nav-bar></app-nav-bar>
-<main>
-  <div class="header">
-    <h1 class="title">Create Your Account</h1>
-    <p class="subtitle">
-      Use your email and password to watch on your favorite devices.
-    </p>
-  </div>
-  <form>
-    <input type="name" placeholder="Full Name" />
-    <input type="email" placeholder="Email" />
-    <input type="password" placeholder="Password" />
-    <input type="password" placeholder="Retype Password" />
-    <h6>Date Of Birth</h6>
+<div class="register-form">
+<div class="form-header">
+  <div class="title">Create Your Account</div>
+  <div class="sub-title">Use your email and password to watch on your favorite devices.</div>
+</div>
+<form>
+  <label for="email">Email</label>
+  <input type="text" name="email" />
+  <label for="password">Password</label>
+  <input type="text" name="password"  />
+  <label for="firstname">Name</label>
+  <input type="text" name="firstname" />
+  <div>
+    <h6>BIRTHDATE</h6>
     <select>
       <option>MONTH</option>
       <option>1</option>
@@ -34,10 +34,16 @@
       <option>1999</option>
       <option>2000</option>
     </select>
-  </form>
-  <footer>
-    <p>By clicking “CONTINUE” you agree to the TrailBlazers Terms of Use and Privacy Policy.</p>
-    <button>CONTINUE</button>
-  </footer>
-</main>
+    <h6>GENDER</h6>
+    <select class="gender">
+      <option>YEAR</option>
+      <option>1997</option>
+      <option>1998</option>
+    </select>
+  </div>
+</form>
+<div class="footer">By clicking “CONTINUE” you agree to the Hulu Terms of Use and Privacy Policy.
+  <button>CONTINUE</button>
+</div>
 
+</div>
