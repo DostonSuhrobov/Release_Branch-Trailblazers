@@ -1,0 +1,88 @@
+nav {
+  position: fixed;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 100%;
+  height: 8rem;
+  background-color:black;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  position: absolute;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  /* background-color: #e6280fd7; */
+  background-color: #00ed82;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem 3rem 1rem 3rem;
+}
+
+.logo a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Walt Disney Script', arial;
+}
+
+.navbarNav {
+  display: flex;
+  position: absolute;
+  margin: 3rem 2rem 1rem 20rem;
+  font-size: 1rem;
+  width: 75%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+
+}
+
+ul li a:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+ul li {
+  margin-left: 2rem;
+}
+
+.modal-content{
+  background-color:transparent;
+  border: 1px solid white;
+  border-radius: 1rem;
+}
+
+
+
+.modal-body input {
+  background-color: transparent;
+  color: white;
+  border-radius: 5px;
+  padding-left: 10px;
+  width: 75%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  height: 3rem;
+}
+
+
+.modal-body button {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
