@@ -13,6 +13,10 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavBarComponent } from './register/nav-bar/nav-bar.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 
 @NgModule({
@@ -25,12 +29,15 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     LoginComponent,
     RegisterComponent,
     NavBarComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    NavbarComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
