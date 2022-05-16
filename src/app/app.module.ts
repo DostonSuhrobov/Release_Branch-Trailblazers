@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { NavBarComponent } from './register/nav-bar/nav-bar.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { NavBarComponent } from './register/nav-bar/nav-bar.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
-    NavBarComponent
+    NavBarComponent,
+    MovieCardComponent
   ],
   imports: [
     BrowserModule,
