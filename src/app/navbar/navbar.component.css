@@ -16,18 +16,19 @@ nav {
   text-align: center;
   font-size: 2rem;
   font-weight: 800;
-  /* background-color: #e6280fd7; */
-  background-color: #43D353;
+  background-color: #1e965e;
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem 3rem 1rem 3rem;
 }
 
+
+
 .logo a{
   text-decoration: none;
   color: white;
   font-family: 'Walt Disney Script', arial;
-}
+} 
 
 .navbarNav {
   display: flex;
@@ -62,7 +63,8 @@ ul li {
 }
 
 .modal-content{
-  background-color:transparent;
+  background-color:black;
+  opacity: 0.87;
   border: 1px solid white;
   border-radius: 1rem;
 }
