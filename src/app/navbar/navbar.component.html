@@ -40,7 +40,8 @@
         <input placeholder="Enter your keywords here..." #all_movies/>
         <button class="btn btn-success" >Search</button>
         <ul  *ngFor="let movie of movieList | async">
-          <li style="color: white;">{{ movie.moviename }}</li>
+          <li style="color: white;"><p>{{ movie.moviename }}</p></li>
+          <li style="color: white;"><h4>{{ movie.vote }}</h4></li>
         </ul>
       </div>
     </div>

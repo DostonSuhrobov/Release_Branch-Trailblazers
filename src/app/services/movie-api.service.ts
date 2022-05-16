@@ -25,7 +25,8 @@ export class MovieApiService {
         const arr = movieobj.results.map((obj: any) => {
           return { 
             moviename: obj.original_title,
-            id: obj.id
+            id: obj.id,
+            vote: obj.vote_average
           };
         });
         return arr;
