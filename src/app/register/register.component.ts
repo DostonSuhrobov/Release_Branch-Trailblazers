@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-register',
@@ -7,9 +8,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  myForm!: FormGroup;
 
-  ngOnInit(): void {
+  get password() {
+    return this.myForm.get('password')
   }
+  get name() {
+    return this.myForm.get('name')
+  }
+
+  get email() {
+    return this.myForm.get('email')
+  }
+
+  get gender() {
+    return this.myForm.get('gender')
+  }
+
+constructor(private formbulider: FormBuilder) {
+
+}
+
+ngOnInit(): void {
+  this.myForm = this.formbulider.group({
+    password: ['', Validators.required, Validators.minLength(6)],
+    name: ['',Validators.required],
+    email: ['', Validators.required, Validators.email],
+    gender: ['', Validators.required]
+  })
+}
+
+onSubmit() {
+
+}
 
 }

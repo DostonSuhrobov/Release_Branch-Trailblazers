@@ -1,49 +1,66 @@
-<div class="register-form">
-<div class="form-header">
-  <div class="title">Create Your Account</div>
-  <div class="sub-title">Use your email and password to watch on your favorite devices.</div>
-</div>
-<form>
-  <label for="email">Email</label>
-  <input type="text" name="email" />
-  <label for="password">Password</label>
-  <input type="text" name="password"  />
-  <label for="firstname">Name</label>
-  <input type="text" name="firstname" />
-  <div>
-    <h6>BIRTHDATE</h6>
-    <select>
-      <option>MONTH</option>
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-    </select>
-    <select>
-      <option>DATE</option>
-      <option>23</option>
-      <option>24</option>
-      <option>25</option>
-      <option>26</option>
-      <option>27</option>
-    </select>
-    <select>
-      <option>YEAR</option>
-      <option>1997</option>
-      <option>1998</option>
-      <option>1999</option>
-      <option>2000</option>
-    </select>
-    <h6>GENDER</h6>
-    <select class="gender">
-      <option>YEAR</option>
-      <option>1997</option>
-      <option>1998</option>
-    </select>
+<main class="register-form">
+  <div class="header">
+    <div class="title">Create Your Account</div>
+    <div class="subtitle">
+      Use your email and password to watch on your favorite devices.
+    </div>
   </div>
-</form>
-<div class="footer">By clicking “CONTINUE” you agree to the Hulu Terms of Use and Privacy Policy.
-  <button>CONTINUE</button>
-</div>
-
-</div>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="email">EMAIL</label>
+      <input type="email" class="form-control" formControlName="email" />
+      <span style="color: red;" *ngIf="email && email.invalid && email.touched">Please enter a valid email address</span>
+    </div>
+    <div class="form-group">
+      <label for="password">PASSWORD</label>
+      <input type="password" class="form-control" formControlName="password" />
+      <span style="color: red;" *ngIf="password && password.invalid && password.touched">Passwords must be six or more characters</span>
+    </div>
+    <div class="form-group">
+      <label for="name"> NAME</label>
+      <input type="text" class="form-control" formControlName="name"/>
+      <span style="color: red;" *ngIf="name && name.invalid && name.touched">Please enter your name</span>
+    </div>
+    <div>
+      <label>BIRTHDATE</label>
+      <select>
+        <option value="none" selected disabled hidden>Month</option>
+        <option></option>
+        <option>July</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+      </select>
+      <select>
+        <option value="none" selected disabled hidden>Day</option>
+        <option>12</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      <select>
+        <option value="none" selected disabled hidden>Year</option>
+        <option>2005</option>
+        <option>2000</option>
+        <option>2001</option>
+        <option>2002</option>
+        <option>2003</option>
+      </select>
+    </div>
+    <div  >
+      <label >GENDER</label>
+      <select class="gender" formControlName="gender">
+        <option value="none" selected disabled hidden>Select</option>
+        <option>Female</option>
+        <option>Male</option>
+        <option>Prefer not to say</option>
+      </select>
+      <span style="color: red;" *ngIf="gender && gender.invalid && gender.touched">Please select your gender</span>
+    </div>
+  </form>
+   <div class="footer">
+      By clicking “CONTINUE” you agree to the Hulu Terms of Use and Privacy Policy.
+      <button [disabled]="myForm.invalid" >CONTINUE</button>
+    </div>
+</main>
