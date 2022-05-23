@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+
+
+<div class="movielist">
+  <div class="movieContainer" *ngFor="let card of moviesCard$ |async">
+    <div class="movieCard" [id]="card.id" (click)="onSelect(card)">
+        <img [src]="baseImageUrl+card.imgUrl"alt="image"/>
+    </div>
+      <p>{{card.moviename}}</p>
+  </div>
+</div>
+

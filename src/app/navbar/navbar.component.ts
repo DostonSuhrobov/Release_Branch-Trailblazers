@@ -41,6 +41,7 @@ export class NavbarComponent implements OnInit {
 
     this.movieList = this.movieApiService.movielist;
     console.log(this.movieList);
+
   }
 
 }
