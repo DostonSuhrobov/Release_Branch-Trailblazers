@@ -15,6 +15,9 @@ import { NavBarComponent } from './register/nav-bar/nav-bar.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MovieslistComponent } from './movieslist/movieslist.component';
+import { MovieItemComponent } from './movieslist/movieItem/movie-item/movie-item.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 
 
@@ -31,12 +34,14 @@ import { HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     MovieCardComponent,
     NavbarComponent,
-    
+    MovieslistComponent,
+    MovieItemComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    YouTubePlayerModule,
     HttpClientModule
   ],
   providers: [],

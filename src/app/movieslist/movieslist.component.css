@@ -1,0 +1,28 @@
+.movielist {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 4fr);
+  padding: 2rem;
+}
+
+.movieContainer{
+  background-color: grey;
+  margin: 1rem;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.movieContainer p {
+  color: white;
+}
+
+
+.movieCard {
+  height: auto;
+  cursor:pointer
+}
+
+.movieCard img {
+  height: 100%;
+  padding: 5px;
+}
