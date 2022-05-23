@@ -17,6 +17,9 @@ export class NavbarComponent implements OnInit {
 
 
   movieList: any;
+  baseImageUrl = 'http://image.tmdb.org/t/p/w185';
+
+
 
   constructor( private movieApiService: MovieApiService, private http: HttpClient ) {}
 

@@ -28,7 +28,8 @@ export class MovieApiService {
           return {
             moviename: obj.original_title,
             id: obj.id,
-            vote: obj.vote_average
+            vote: obj.vote_average,
+            imgUrl: obj.poster_path
           };
         });
         return arr;
