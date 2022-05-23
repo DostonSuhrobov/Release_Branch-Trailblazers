@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { map, tap, switchMap } from 'rxjs/operators';
-import { MovieCardsService } from 'src/app/services/moviecardsservice/movieCards.service';
+import { MovieApiService } from 'src/app/services/movie-api.service'
 
 @Component({
   selector: 'app-movie-item',
@@ -15,7 +15,7 @@ export class MovieItemComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private movieCardService: MovieCardsService
+    private movieCardService: MovieApiService
   ) {}
 
   ngOnInit(): void {
