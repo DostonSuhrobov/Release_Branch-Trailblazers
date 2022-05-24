@@ -26,7 +26,7 @@ export class MovieslistComponent implements OnInit {
 
   onSelect(card: any){
     this.route.navigate(['/movies', card.id])
-    alert('hey!');
+    
   }
 
 
