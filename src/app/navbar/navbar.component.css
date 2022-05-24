@@ -63,13 +63,13 @@ ul li {
 }
 
 .modal-body ul:hover {
-  background-color: #1e965e;
+  background-color: #1e965e7c;
 }
 
 .modal-content{
   background-color:black;
   opacity: 0.87;
-  border: 1px solid white;
+  border: 0.5px  white;
   border-radius: 1rem;
 }
 
@@ -98,4 +98,5 @@ ul li {
   padding: 5px;
   height: 70px;
   width: 60px;
+  border-radius: 10px;
 }

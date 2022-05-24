@@ -29,9 +29,7 @@ export class MovieslistComponent implements OnInit {
     alert('hey!');
   }
 
-  info_page(){
-    alert('hey!');
-  }
+
 
 
 }
