@@ -42,6 +42,7 @@
 
 .movieContainer:hover::before {
   opacity: 1;
+  
 }
 
 .movieContainer .info {
@@ -54,6 +55,7 @@
   opacity: 0;
   transform: translateY(30px);
   transition: 0.5s all;
+  pointer-events: none;
 }
 
 .movieContainer:hover .info {
