@@ -8,6 +8,7 @@ nav {
   height: 8rem;
   background-color:black;
   color: white;
+  z-index: 4;
 }
 
 .logo {
@@ -16,17 +17,15 @@ nav {
   text-align: center;
   font-size: 2rem;
   font-weight: 800;
-  background-color: #1e965e;
+  /* background-color: #1e965e; */
   border-radius: 1rem;
   padding: 1rem;
   margin: 1rem 3rem 1rem 3rem;
 }
 
-
-
 .logo a{
   text-decoration: none;
-  color: white;
+  color: #3cdd52;
   font-family: 'Walt Disney Script', arial;
 } 
 
@@ -63,7 +62,7 @@ ul li {
 }
 
 .modal-body ul:hover {
-  background-color: #1e965e7c;
+  background-color: #11613c7c;
 }
 
 .modal-content{

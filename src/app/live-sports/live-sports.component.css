@@ -1,3 +1,6 @@
+
+
+
 .legal-text {
     margin: 30px;
     margin-top: 10px;
@@ -45,6 +48,7 @@
   }
 
     .text-xl {
+        color: white;
         font-size: 70px;
         font-weight: bold;
         margin: 20px;
