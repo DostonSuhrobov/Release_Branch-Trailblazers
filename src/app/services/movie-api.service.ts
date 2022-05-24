@@ -29,7 +29,8 @@ export class MovieApiService {
             moviename: obj.original_title,
             id: obj.id,
             vote: obj.vote_average,
-            imgUrl: obj.poster_path
+            imgUrl: obj.poster_path,
+            
           };
         });
         return arr;
@@ -61,7 +62,9 @@ moviecards$ = this.mcsbj$.asObservable();
           return {
             moviename: obj.original_title,
             id: obj.id,
-            imgUrl: obj.poster_path
+            imgUrl: obj.poster_path,
+            release: obj.release_date,
+            overview: obj.overview
           };
         });
         return arr;
