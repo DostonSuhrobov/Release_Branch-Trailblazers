@@ -49,18 +49,18 @@
       </select>
     </div>
     <div  >
-      <label >GENDER</label>
+      <!-- <label >GENDER</label>
       <select class="gender" formControlName="gender">
         <option value="none" selected disabled hidden>Select</option>
         <option>Female</option>
         <option>Male</option>
         <option>Prefer not to say</option>
-      </select>
+      </select> -->
       <span style="color: red;" *ngIf="gender && gender.invalid && gender.touched">Please select your gender</span>
     </div>
   </form>
    <div class="footer">
-      By clicking “CONTINUE” you agree to the Hulu Terms of Use and Privacy Policy.
+      <!-- By clicking “CONTINUE” you agree to the Hulu Terms of Use and Privacy Policy. -->
       <button [disabled]="myForm.invalid" >CONTINUE</button>
     </div>
 </main>
