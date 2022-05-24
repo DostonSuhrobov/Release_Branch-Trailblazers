@@ -19,7 +19,7 @@ p {
 }
 
  .header {
-     margin-top: 8rem;
+     margin-top: 0rem;
      height: 530px;
      background: url("/assets/img/header.jpg") no-repeat center center / cover;
 
@@ -49,19 +49,20 @@ p {
      flex-direction: column;
      justify-content: flex-start;
      align-items: center;
-     margin-top: 15px;
+     margin-top: 60px;
  }
 
  .header .logo {
      width: 600px;
-     margin: 20px;
+     margin: 0px;
  }
 
  .header .header-text-1 {
      font-size: 22px;
      font-weight: 500;
      text-align: center;
-     margin-bottom: 15px;
+     
+     margin-bottom: 2px;
  }
 
 .header::after {
@@ -99,6 +100,74 @@ p {
 .btn-cta:hover {
     opacity: 0.8;
 }
+
+nav {
+    position: fixed;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    font-weight: 500;
+    width: 100%;
+    /* height: 8rem; */
+    background:linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+    color: white;
+    z-index: 4;
+  }
+
+  /* navbar part */
+
+  
+  .logo_home {
+    display: flex;
+    position: absolute;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 800;
+    /* background-color: #1e965e; */
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem 3rem 1rem 3rem;
+  }
+  
+  .logo_home a{
+    text-decoration: none;
+    color: #3cdd52;
+    font-family: 'Walt Disney Script', arial;
+  } 
+  
+  .navbarNav {
+    display: flex;
+    position: absolute;
+    margin: 3rem 2rem 1rem 20rem;
+    font-size: 1rem;
+    width: 75%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  ul li a {
+    text-decoration: none;
+    color: white;
+  
+  }
+  
+  ul li a:hover {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  ul li {
+    margin-left: 2rem;
+  }
+  
+  
 
 
 
