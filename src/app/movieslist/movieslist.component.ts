@@ -12,7 +12,8 @@ import { MovieApiService } from 'src/app/services/movie-api.service'
 export class MovieslistComponent implements OnInit {
 
   moviesCard$: any;
-  baseImageUrl = 'http://image.tmdb.org/t/p/w185'
+  baseImageUrl = 'http://image.tmdb.org/t/p/w185';
+
 
 
   constructor(private movieCardService: MovieApiService, private route: Router) { }
@@ -26,10 +27,13 @@ export class MovieslistComponent implements OnInit {
 
   onSelect(card: any){
     this.route.navigate(['/movies', card.id])
-    
+
   }
 
 
+  loadMore(){
+    this.movieCardService.loadMoreCards()
+  }
 
 
 }

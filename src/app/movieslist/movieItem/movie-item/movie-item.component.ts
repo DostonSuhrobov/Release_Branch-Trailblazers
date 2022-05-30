@@ -13,6 +13,7 @@ export class MovieItemComponent implements OnInit {
   movieid: any;
   videoKey = '';
 
+
   constructor(
     private route: ActivatedRoute,
     private movieCardService: MovieApiService
@@ -29,12 +30,16 @@ export class MovieItemComponent implements OnInit {
               const key = data.results[0].key;
               this.videoKey = key;
             })
-          )
-          .subscribe();
+          ).subscribe();
       });
+
+
+
 
     const tag = document.createElement('script');
     tag.src = 'https://www.youtube.com/iframe_api';
     document.body.appendChild(tag);
+
+
   }
 }

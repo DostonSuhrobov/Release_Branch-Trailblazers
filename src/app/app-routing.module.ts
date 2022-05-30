@@ -1,36 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-// import { HeaderComponent } from './header/header.component';
-import { LoginComponent} from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { MovieslistComponent } from './movieslist/movieslist.component';
-import { MovieItemComponent } from './movieslist/movieItem/movie-item/movie-item.component';
-
 
 const routes: Routes = [
   {
-    component: LoginComponent,
-    path: 'login'
+    path: '',
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
-    component: MovieslistComponent,
     path: 'movies',
-    children: [
-      {
-        path:':movieId',
-        component: MovieItemComponent
-      }
-    ]
+    loadChildren: () => import('./movieslist/movieslist.module').then(m => m.MovieslistModule)
   },
   {
-    component: RegisterComponent,
-    path: 'register'
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then(m => m.LogintModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
   },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
