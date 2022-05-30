@@ -30,7 +30,7 @@ export class MovieApiService {
             id: obj.id,
             vote: obj.vote_average,
             imgUrl: obj.poster_path,
-            
+
           };
         });
         return arr;
@@ -44,11 +44,12 @@ export class MovieApiService {
     .subscribe();
   }
 
-//   For Movie cards 
+//   For Movie cards
 
 private baseUrl = "https://api.themoviedb.org/3/";
-private discoverUrl = "discover/movie?api_key=e564841b67db5e6169f2878e05efea32"
+private discoverUrl = "discover/movie?api_key=e564841b67db5e6169f2878e05efea32&page=";
 private baseVideoUrl = "https://api.themoviedb.org/3/movie/";
+private page = 1;
 private videoUrl ="/videos?api_key=e564841b67db5e6169f2878e05efea32&language=en-US"
 private movieCards: any = [];
 private mcsbj$ = new Subject();
@@ -56,7 +57,7 @@ moviecards$ = this.mcsbj$.asObservable();
 
 
   getMovieCards(){
-    this.http.get([this.baseUrl,this.discoverUrl].join('')).pipe(
+    this.http.get([this.baseUrl,this.discoverUrl, this.page].join('')).pipe(
       map((data: any) => {
         const arr = data.results.map((obj: any) => {
           return {
@@ -70,20 +71,21 @@ moviecards$ = this.mcsbj$.asObservable();
         return arr;
       }),
       tap((movielist: any) => {
-        this.movieCards = [...movielist]
+        this.movieCards = [...this.movieCards, ...movielist]
         this.mcsbj$.next(this.movieCards)
       })
     ).subscribe()
   }
 
 
+  loadMoreCards(){
+    this.page ++;
+    this.getMovieCards();
+  }
+
     getVideoKey(movieKey: any){
       return this.http.get([this.baseVideoUrl, movieKey,this.videoUrl].join(''))
     }
-
-
-
-
 
 
 
