@@ -1,7 +1,12 @@
 <router-outlet></router-outlet>
 
 
-<div class="movielist">
+<div class="movielist"
+  infiniteScroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollThrottle]="1500"
+  (scrolled)="onScroll()"
+>
   <div class="movieContainer"
   *ngFor="let card of moviesCard$ | async">
     <div class="movieCard" [id]="card.id" (click)="onSelect(card)">
@@ -17,7 +22,11 @@
   </div>
 
 </div>
-<div class="loadMoreBtn">
-  <button type="button" (click)="loadMore()">Load Mores...</button>
+
+<div class="loadingSpiner" *ngIf="isScroll">
+  <app-loading-spinner></app-loading-spinner>
 </div>
+
+
+
 

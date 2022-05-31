@@ -88,16 +88,9 @@
 }
 
 
-.loadMoreBtn {
-  width: 20%;
-  margin: auto;
-  padding-bottom: 3rem;
+.loadingSpiner {
+  display: flex;
+  justify-content: center;
 }
 
 
-.loadMoreBtn button {
-  width: 100%;
-  height: 2rem;
-  border-radius: 5px;
-  cursor: pointer;
-}

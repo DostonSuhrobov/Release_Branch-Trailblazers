@@ -78,14 +78,14 @@ moviecards$ = this.mcsbj$.asObservable();
   }
 
 
-  loadMoreCards(){
+  scrollDown(){
     this.page ++;
     this.getMovieCards();
   }
 
-    getVideoKey(movieKey: any){
-      return this.http.get([this.baseVideoUrl, movieKey,this.videoUrl].join(''))
-    }
+  getVideoKey(movieKey: any){
+    return this.http.get([this.baseVideoUrl, movieKey,this.videoUrl].join(''))
+  }
 
 
 

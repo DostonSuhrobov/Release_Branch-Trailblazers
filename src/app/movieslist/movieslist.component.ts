@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import  { MovieCardsService } from '../services/moviecardsservice/movieCards.service'
 import { MovieApiService } from 'src/app/services/movie-api.service'
 
 @Component({
@@ -13,7 +12,7 @@ export class MovieslistComponent implements OnInit {
 
   moviesCard$: any;
   baseImageUrl = 'http://image.tmdb.org/t/p/w185';
-
+  isScroll = false;
 
 
   constructor(private movieCardService: MovieApiService, private route: Router) { }
@@ -31,9 +30,9 @@ export class MovieslistComponent implements OnInit {
   }
 
 
-  loadMore(){
-    this.movieCardService.loadMoreCards()
+  onScroll(){
+    this.isScroll = true;
+    this.movieCardService.scrollDown()
   }
-
 
 }
