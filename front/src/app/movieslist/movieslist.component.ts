@@ -1,38 +1,36 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { MovieApiService } from 'src/app/services/movie-api.service'
+import { ActivatedRoute, Router } from '@angular/router';
+import { MovieApiService } from 'src/app/services/movie-api.service';
 
 @Component({
   selector: 'app-movieslist',
   templateUrl: './movieslist.component.html',
-  styleUrls: ['./movieslist.component.css']
+  styleUrls: ['./movieslist.component.css'],
 })
 export class MovieslistComponent implements OnInit {
-
   moviesCard$: any;
   baseImageUrl = 'http://image.tmdb.org/t/p/w185';
   isScroll = false;
 
+  constructor(
+    private movieCardService: MovieApiService,
+    private route: Router,
+    private routeR: ActivatedRoute
+  ) {}
 
-  constructor(private movieCardService: MovieApiService, private route: Router) { }
-
-  ngOnInit():void {
-
-      this.movieCardService.getMovieCards()
-      this.moviesCard$ = this.movieCardService.moviecards$
-
+  ngOnInit(): void {
+    this.movieCardService.getMovieCards();
+    this.moviesCard$ = this.movieCardService.moviecards$
+    // this.moviesCard$ = this.routeR.snapshot.data['movieca'];
   }
 
-  onSelect(card: any){
-    this.route.navigate(['/movies', card.id])
-
+  onSelect(card: any) {
+    this.route.navigate(['/movies', card.id]);
   }
 
-
-  onScroll(){
+  onScroll() {
     this.isScroll = true;
-    this.movieCardService.scrollDown()
+    this.movieCardService.scrollDown();
   }
-
 }

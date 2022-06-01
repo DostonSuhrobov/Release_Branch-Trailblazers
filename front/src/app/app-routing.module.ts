@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MovieslistResolver } from './movielist-resolve.services';
 
 
 const routes: Routes = [
@@ -9,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'movies',
-    loadChildren: () => import('./movieslist/movieslist.module').then(m => m.MovieslistModule)
+    loadChildren: () => import('./movieslist/movieslist.module').then(m => m.MovieslistModule), //resolve: {movieca: MovieslistResolver}
   },
   {
     path: 'login',
