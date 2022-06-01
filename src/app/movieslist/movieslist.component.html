@@ -22,6 +22,9 @@
   </div>
 
 </div>
+<div class="laodmore"*ngIf="!isScroll">
+  <P>Load more...</P>
+</div>
 
 <div class="loadingSpiner" *ngIf="isScroll">
   <app-loading-spinner></app-loading-spinner>
