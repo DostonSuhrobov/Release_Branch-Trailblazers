@@ -1,6 +1,6 @@
 <div class="form_modal_container">
     <div class="form_container">
-      <form [formGroup]="myLoginForm" >
+      <form [formGroup]="myLoginForm" (ngSubmit)="loginInfo(myLoginForm)">
         <fieldset>
           <legend>Login</legend>
           <div class="form-group">
@@ -13,7 +13,8 @@
             <span style="color: red;" *ngIf="password && password.invalid && password.touched">
               Error: Please enter your password</span>
           </div>
-          <button type="button"class="btn btn-secondary" [disabled]="myLoginForm.invalid" >Login</button>
+          <!-- <button (click)="loginInfo()" type="button" class="btn btn-secondary" [disabled]="myLoginForm.invalid">Login</button> -->
+          <button type="submit" class="btn btn-secondary" >Login</button>
           <button routerLink="/register" type="button" class="btn btn-secondary">Register</button>
           <small>Forget your email or password?</small>
         </fieldset>
