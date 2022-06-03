@@ -1,39 +1,53 @@
-
-.modal-body ul:hover {
-  background-color: #11613c7c;
-}
-
-.modal-content{
-  background-color:black;
-  opacity: 0.87;
-  border: 0.5px  white;
-  border-radius: 1rem;
-}
-
-
-
-.modal-body input {
-  background-color: transparent;
+nav {
+  position: fixed;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+  width: 100vw;
+  height: 8rem;
+  background:black;
   color: white;
-  border-radius: 5px;
-  padding-left: 10px;
-  width: 75%;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  height: 3rem;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+
+}
+
+/* navbar part */
+
+
+
+.navbarNav {
+  display: flex;
+  position: absolute;
+  font-size: 25px;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 5rem;
+
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+
+}
+
+ul li a:hover {
+  font-size: 20px;
+  cursor: pointer;
 }
 
 
-.modal-body button {
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+ul li {
+  margin-left: 2rem;
 }
 
 
-
-.card_style  {
-  padding: 5px;
-  height: 70px;
-  width: 60px;
-  border-radius: 10px;
-}

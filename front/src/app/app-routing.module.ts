@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MovieslistResolver } from './movielist-resolve.services';
+import { PageNotFoundComponent } from './shared/pagenotfound/pagenotfound';
 
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
@@ -20,6 +21,13 @@ const routes: Routes = [
     path: 'register',
     loadChildren: () => import('./register/register.module').then(m => m.RegisterModule)
   },
+  {
+    path: '', redirectTo:"home", pathMatch: 'full'
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
 ];
 
 @NgModule({

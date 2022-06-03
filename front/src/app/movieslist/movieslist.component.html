@@ -1,12 +1,22 @@
 <router-outlet></router-outlet>
 
 
+<div class="sort-container">
+
+  <select>
+    <option>Sort by rating</option>
+    <option>Sort by released date</option>
+    <option>Sort by alphabet</option>
+  </select>
+</div>
+
 <div class="movielist"
   infiniteScroll
   [infiniteScrollDistance]="2"
   [infiniteScrollThrottle]="1500"
   (scrolled)="onScroll()"
 >
+
   <div class="movieContainer"
   *ngFor="let card of moviesCard$ | async">
     <div class="movieCard" [id]="card.id" (click)="onSelect(card)">
