@@ -2,7 +2,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 4fr);
-  padding: 2rem;
+  padding: 2rem 2rem;
   overflow: scroll;
 
 }
@@ -98,5 +98,20 @@
   text-align: center;
   font-size: 2rem;
   color: white;
+}
+
+
+.sort-container {
+  color: white;
+  padding: 12rem 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.sort-container select {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 10px;
 }
 
