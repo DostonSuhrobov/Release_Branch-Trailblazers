@@ -1,0 +1,97 @@
+.standardmembership {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.standard-info{
+  width: 40%;
+  height: 50%;
+  margin: auto;
+  color: white;
+  border: 1px solid grey;
+  text-align: left;
+  border-radius: 10px;
+}
+
+.standard-info h1 {
+  padding-left: 10%;
+  padding-top: 2rem;
+}
+.product-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid lightgrey;
+  width: 80%;
+  margin: auto;
+  padding-top: 3rem;
+}
+
+.product-des {
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid lightgrey;
+  width: 80%;
+  margin: auto;
+  padding-top: 1rem;
+}
+
+.total {
+  display: flex;
+  justify-content: right;
+  width: 80%;
+  margin: auto;
+  padding-top: 2rem;
+  font-weight: bold;
+}
+
+.total-price {
+  color: red;
+  padding-left: 10px;
+}
+
+.button-container{
+  width: 80%;
+  display: flex;
+  margin: auto;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+
+.previous {
+  width: 40%;
+  display: flex;
+  align-items: baseline;
+  padding-top: 5rem;
+}
+
+
+
+.previous button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.confirm {
+  width: 40%;
+  display: flex;
+  align-items: baseline;
+  padding-top: 5rem;
+}
+
+
+.confirm button {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+
+
