@@ -1,0 +1,46 @@
+.nopermission {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.permission-info{
+  width: 40%;
+  height: 40%;
+  margin: auto;
+  color: white;
+  border: 1px solid grey;
+  text-align: center;
+
+}
+
+.lockicon {
+  padding-bottom: 2rem;
+}
+.lockicon h1{
+  font-size: 10rem;
+}
+
+.permission-info p {
+  color: white;
+  font-size: 2rem;
+}
+
+.membershipbtn {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.membershipbtn button {
+  width: 40%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+}
+
+
+

@@ -28,7 +28,7 @@ form {
   top:2%;
   left: 32%;
   width: 35%;
-  height: 69%;
+  height: 80%;
   padding: 68px;
   background-color: white;
 }
@@ -110,5 +110,7 @@ button{
 }
 
 
-
+.show {
+  display: block;
+}
 

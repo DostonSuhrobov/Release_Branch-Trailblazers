@@ -1,0 +1,50 @@
+<div class="membership-container">
+  <div class="membership">
+    <div class="membership-title">
+      <h1>Choose the plan that's right for you.</h1>
+      <p class="membership-subtitle">Watch all you want. Ad-free.</p>
+      <p class="membership-subtitle">Recommondations just for you.</p>
+      <p class="membership-subtitle">Change or cancel your plan anytime.</p>
+    </div>
+    <table>
+      <thead>
+        <tr class="header-row">
+          <p scope="col"></p>
+          <th  id="basic" scope="col" (click)="onSelect($event)">Basic</th>
+          <th  id="standard" scope="col"  (click)="onSelect($event)">Standard</th>
+          <th  id="premium" scope="col"  (click)="onSelect($event)">Premium</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="first-row">
+          <th scope="row" >Monthly price</th>
+          <td [ngClass]="{'basic': currentClass==='basic'}">FREE</td>
+          <td [ngClass]="{'standard': currentClass==='standard'}">$15.49</td>
+          <td [ngClass]="{'premium': currentClass==='premium'}">$19.99</td>
+        </tr>
+        <tr  class="second-row">
+          <th scope="row">Video quality</th>
+          <td [ngClass]="{'basic': currentClass==='basic'}" >Good</td>
+          <td [ngClass]="{'standard': currentClass==='standard'}">Better</td>
+          <td [ngClass]="{'premium':  currentClass==='premium'}">Best</td>
+        </tr>
+        <tr class="third-row">
+          <th scope="row">Resolution</th>
+          <td [ngClass]="{'basic': currentClass==='basic'}">480p</td>
+          <td [ngClass]="{'standard': currentClass==='standard'}">1080p</td>
+          <td [ngClass]="{'premium':  currentClass==='premium'}">4K+HDR</td>
+        </tr>
+        <tr class="fourth-row">
+          <th scope="row">Watch on your TV, computer, mobile phone and tablet</th>
+          <td [ngClass]="{'basic': currentClass==='basic'}" [innerHTML]="checkedSign"></td>
+          <td [ngClass]="{'standard': currentClass==='standard'}" [innerHTML]="checkedSign"></td>
+          <td  [ngClass]="{'premium':  currentClass==='premium'}"[innerHTML]="checkedSign"></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="nextbtn">
+      <button type="button" (click)="next()">Next</button>
+    </div>
+  </div>
+
+</div>

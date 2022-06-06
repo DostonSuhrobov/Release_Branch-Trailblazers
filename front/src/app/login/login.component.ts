@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { map } from 'rxjs/operators';
 
 import { BackendApiService } from '../services/backend-api.service'
 
@@ -11,7 +13,6 @@ import { BackendApiService } from '../services/backend-api.service'
 export class LoginComponent implements OnInit {
   myLoginForm!: FormGroup;
 
- 
 
   get email() {
     return this.myLoginForm.get('email');
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
     return this.myLoginForm.get('username');
   }
 
-  constructor(private fb: FormBuilder, private _auth: BackendApiService ) {}
+  constructor(private fb: FormBuilder, private _auth: BackendApiService, private route: Router) {}
 
   ngOnInit(): void {
     this.myLoginForm = this.fb.group({
@@ -38,14 +39,15 @@ export class LoginComponent implements OnInit {
   loginInfo(f : FormGroup){
     this._auth.logIn( f.value.email, f.value.password )
     .subscribe(
-      res =>{
-        console.log('User successfully logged in!')
-        console.log(res)},
-      err => console.log(err)
+      res => this.route.navigate(['/home']),
+      err => {
+        alert('Incorret email or password, please check again')
+        f.reset()
+      },
+      () => console.log()
     )
 
 
-    console.log(f.value);
   }
 
 

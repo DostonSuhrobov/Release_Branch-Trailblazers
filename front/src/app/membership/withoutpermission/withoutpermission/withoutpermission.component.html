@@ -1,0 +1,12 @@
+<div class="nopermission">
+  <div class="permission-info">
+      <div class="lockicon">
+        <h1 [innerHTML]="lockIcon"></h1>
+        <p>Your dont't have permission to view this page.</p>
+      </div>
+      <div class="membershipbtn">
+        <button type="button" class='btn-primary' (click)="upgradeMembership()">Upgrade your membership</button>
+        <button type="button" class='btn-primary' (click)="backToHome()">Back to homepage</button>
+      </div>
+  </div>
+</div>

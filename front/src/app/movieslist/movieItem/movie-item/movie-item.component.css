@@ -2,9 +2,10 @@
 
 .videoContainer{
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  padding-top: 10rem;
 }
 
 

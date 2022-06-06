@@ -8,7 +8,12 @@ import { AppComponent } from './app.component';
 
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { MembershipComponent } from './membership/membership.component';
+import { WithoutpermissionComponent } from './membership/withoutpermission/withoutpermission/withoutpermission.component';
+import { StandardComponent } from './membership/standard/standard.component';
+
+import { JwtInterceptor } from './authInterceptor/JwtInterceptor';
 
 
 
@@ -19,6 +24,10 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     FooterComponent,
     NavbarComponent,
+    MembershipComponent,
+    WithoutpermissionComponent,
+    StandardComponent,
+
 
   ],
   imports: [
@@ -28,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
 
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
